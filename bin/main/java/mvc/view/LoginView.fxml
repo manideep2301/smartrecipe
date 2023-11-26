@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:controller="main.java.mvc.controller.UserController"
+          xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" vgap="10" padding="25">
+
+    <Text text="Login" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" styleClass="heading"/>
+
+    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <HBox spacing="10" alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <Button text="Login" onAction="#handleLogin" />
+        <Button text="Register" onAction="#handleRegister"/>
+    </HBox>
+
+    <Label fx:id="loginMessageLabel" textFill="red" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+</GridPane>
